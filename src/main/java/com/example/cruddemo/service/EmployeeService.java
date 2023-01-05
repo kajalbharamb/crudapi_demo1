@@ -28,16 +28,16 @@ public class EmployeeService {
         return repository.findById(id).orElse(null);
     }
 
-    public Employee getProductByName(String name){
+    public Employee getEmployeeName(String name){
         return repository.findByName(name);
     }
 
-    public String deleteProduct(int id){
+    public String deleteEmployee(int id){
         repository.deleteById(id);
-        return "Product deleted !"+id;
+        return "Employee deleted !"+id;
     }
 
-    public Employee updateproduct(Employee employee){
+    public Employee updateEmployee(Employee employee){
         Employee existingEmployee=repository.findById(employee.getId()).orElse(null);
         existingEmployee.setName(employee.getName());
         existingEmployee.setSalary(employee.getSalary());

@@ -16,7 +16,6 @@ import javax.validation.constraints.NotNull;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
     private Integer Id;
     @NotEmpty(message = "name is mandatory")
     private String name;
